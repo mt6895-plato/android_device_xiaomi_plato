@@ -35,4 +35,4 @@ on boot
 	
     # camera flash led
 	chown system system /sys/class/flashlight_core/flashlight/torchbrightness
-    chmod 0664 /sys/class/flashlight_core/flashlight/torchbrightness
+    chmod 0666 /sys/class/flashlight_core/flashlight/torchbrightness
