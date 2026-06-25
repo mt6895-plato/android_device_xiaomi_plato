@@ -13,6 +13,21 @@ $(call inherit-product, device/xiaomi/plato/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#################### AxionOS Stuff ####################
+
+TARGET_DISABLE_EPPE := true # Disables Enforced Prebuilt Package Exemption
+TARGET_ENABLE_BLUR := true 
+TARGET_INCLUDE_AXFX := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+
+AXION_CAMERA_REAR_INFO := 108,8,2
+AXION_CAMERA_FRONT_INFO := 20
+
+AXION_MAINTAINER := archcloudy
+AXION_PROCESSOR := Dimensity_8100-Ultra
+
+#######################################################
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := plato
 PRODUCT_MANUFACTURER := xiaomi
