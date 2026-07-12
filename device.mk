@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayPlato \
     SettingsResOverlayPlato \
     SystemUIOverlayPlato \
-    WifiResOverlayPlato
+    WifiResOverlayPlato \
+    UpdaterOverlayPlato
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
