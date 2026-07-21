@@ -4,7 +4,7 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.pixelos.ota.overlay.xaga"
+    package="net.pixelos.ota.overlay.plato"
 >
     <overlay
         android:isStatic="true"
