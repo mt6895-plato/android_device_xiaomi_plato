@@ -29,6 +29,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/bin/spkcal_tfa': blob_fixup()
+        .add_needed('libaudioclient_shim.so'),
     'vendor/bin/mi_thermald': blob_fixup()
         .binary_regex_replace(b'%d/on', b'%d/..'),
     'vendor/etc/sensors/hals.conf': blob_fixup()
