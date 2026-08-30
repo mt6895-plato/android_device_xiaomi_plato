@@ -14,6 +14,10 @@ PRODUCT_COPY_FILES += \
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/plato-miuicamera/device.mk)
 
+# Dolby
+PRODUCT_PACKAGES += \
+    DolbyAtmos
+
 # Fingerprint
 TARGET_HAS_UDFPS := true
 
