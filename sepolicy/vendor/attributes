@@ -1,0 +1,9 @@
+# Citsensor
+attribute vendor_hal_citsensorservice_xiaomi;
+attribute vendor_hal_citsensorservice_xiaomi_client;
+attribute vendor_hal_citsensorservice_xiaomi_server;
+
+# SensorCommunicate
+attribute vendor_hal_sensorcommunicate;
+attribute vendor_hal_sensorcommunicate_client;
+attribute vendor_hal_sensorcommunicate_server;
