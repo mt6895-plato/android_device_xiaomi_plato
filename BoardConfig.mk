@@ -29,6 +29,9 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 BOOT_SECURITY_PATCH := 2026-06-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Inherit from mt6895-common
 include device/xiaomi/mt6895-common/BoardConfigCommon.mk
 
