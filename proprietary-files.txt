@@ -46,14 +46,14 @@ vendor/firmware/SPK-cs35l41-dsp1-spk-cali.bin
 vendor/firmware/SPK-cs35l41-dsp1-spk-prot.bin
 
 # Audio (Calibration)
-system_ext/bin/spkcal
+system_ext/bin/spkcal;DISABLE_CHECKELF
 system_ext/bin/spkcal_88263s
 system_ext/bin/spkcal_88263s_m16
 system_ext/bin/spkcal_88263s_m9
 system_ext/bin/spkcal_88263s_n12
 system_ext/bin/spkcal_88263s_n12a
 system_ext/bin/spkcal_88263s_o10
-system_ext/bin/spkcal_tfa
+system_ext/bin/spkcal_tfa;DISABLE_CHECKELF
 system_ext/lib64/libtfa98xx_cal.so
 vendor/etc/1khz.wav
 vendor/etc/bottom_spk.wav
