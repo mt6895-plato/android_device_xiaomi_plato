@@ -1,4 +1,4 @@
-# Unpinned firmware from HyperOS OS2.0.215.0.VLQMIXM (plato) fastboot package
+# Unpinned firmware from plato-user OS2.0.217.0.VLQMIXM fastboot package
 
 apusys.img;AB
 audio_dsp.img;AB

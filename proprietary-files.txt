@@ -1,4 +1,4 @@
-# Unpinned blobs from plato-user 15 AP3A.240905.015.A2 OS2.0.215.0.VLQMIXM release-keys 
+# Unpinned blobs from plato-user 15 AP3A.240905.015.A2 OS2.0.217.0.VLQMIXM release-keys 
 
 # Audio Configs
 vendor/etc/audio_param/AudioParamOptions_vext.xml
@@ -688,6 +688,7 @@ vendor/thh/ta/3d08821c33a611e6a1fa089e01c83aa2.ta
 vendor/thh/ta/40188311faf343488db888ad39496f9a.ta
 vendor/thh/ta/86f623f6a2994dfdb560ffd3e5a62c29.ta
 vendor/thh/ta/8888c03fc30c4dd0a319ea29643d4d4b.ta
+vendor/thh/ta/8aaaf201246000007143fe4f7c823c80.ta
 vendor/thh/ta/93feffccd8ca11e796c7c7a21acb4932.ta
 vendor/thh/ta/c09c9c5daa504b78b0e46eda61556c3a.ta
 vendor/thh/ta/c1882f2d885e4e13a8c8e2622461b2fa.ta
