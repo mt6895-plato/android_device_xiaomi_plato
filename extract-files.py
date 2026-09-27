@@ -17,6 +17,16 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+_displayservice_ping = (
+    b'_ZN7lineage10frameworks14displayservice4V1_014IEventCallback4pingEv'
+)
+_displayservice_unresolved = (
+    rb'_ZN7lineage10frameworks14displayservice4V1_01[45]I[A-Za-z0-9_]*'
+    rb'(?:linkToDeath|unlinkToDeath|getDebugInfo|getHashChain|'
+    rb'interfaceChain|interfaceDescriptor|5debug|registerForNotifications)'
+    rb'[A-Za-z0-9_]*'
+)
+
 namespace_imports = [
     'hardware/mediatek',
     'hardware/mediatek/libion_mtk',
@@ -58,6 +68,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     ('vendor/lib64/mt6895/libmtkcam_stdutils.so', 'vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
+    'vendor/lib64/mt6895/libmtkcam_hal_android_app_cbadaptor.so': blob_fixup()
+        .replace_needed('android.frameworks.displayservice@1.0.so',
+                        'lineage.frameworks.displayservice@1.0.so')
+        .binary_regex_replace(
+            b'7android10frameworks14displayservice',
+            b'7lineage10frameworks14displayservice')
+        .binary_regex_replace(
+            _displayservice_unresolved,
+            lambda m: _displayservice_ping.ljust(len(m.group(0)), b'\x00')),
     ('vendor/lib64/mt6895/lib3a.flash.so', 'vendor/lib64/mt6895/lib3a.sensors.color.so', 'vendor/lib64/mt6895/lib3a.sensors.flicker.so'): blob_fixup()
         .add_needed('liblog.so'),
     ('vendor/lib64/mt6895/libcam.hal3a.so', 'vendor/lib64/mt6895/libcam.hal3a.ctrl.so', 'vendor/lib64/mt6895/libmtkcam_request_requlator.so'): blob_fixup()

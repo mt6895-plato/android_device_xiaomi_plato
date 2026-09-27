@@ -14,6 +14,9 @@ PRODUCT_COPY_FILES += \
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/plato-miuicamera/device.mk)
 
+# Display
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
+
 # Dolby
 PRODUCT_PACKAGES += \
     DolbyAtmos
