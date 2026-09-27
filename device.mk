@@ -11,6 +11,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Display
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
+
 # Fingerprint
 TARGET_HAS_UDFPS := true
 
