@@ -11,9 +11,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, device/xiaomi/plato-miuicamera/device.mk)
-
 # Display
 $(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
